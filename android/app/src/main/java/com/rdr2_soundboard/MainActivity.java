@@ -1,4 +1,4 @@
-package com.rdr2_soundboard;
+package com.fnd_soundboard;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "rdr2_soundboard";
+        return "fnd_soundboard";
     }
 }
