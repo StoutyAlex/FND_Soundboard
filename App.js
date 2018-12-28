@@ -7,6 +7,7 @@ import {StyleSheet,
   Dimensions,
   TouchableHighlight,
   ImageBackground,
+  ToastAndroid,
 } from 'react-native';
 
 var Sound = require('react-native-sound');
@@ -30,12 +31,14 @@ export default class App extends Component {
   playSound = (uri) => {
     let sound = new Sound(`${uri}.mp3`, Sound.MAIN_BUNDLE, (error) => {
       if (error) {
+        console.log(error);
         return;
       } else {
         sound.play((success) => {
           if (success) {
             return;
           } else {
+            console.log(success);
             sound.reset();
           }
         });
